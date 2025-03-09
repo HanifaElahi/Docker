@@ -7,6 +7,7 @@
 ```bash
 docker run hello-world
 ```
+
 <img src="https://github.com/HanifaElahi/Docker/blob/main/images/hello-world-run.png">
 
 - This pulls the latest hello-world image and runs it.
@@ -14,13 +15,11 @@ docker run hello-world
 
 If want to pull a specific image without running it:
 
-
 ```bash
 docker pull hello-world
 ```
 
 <img src="https://github.com/HanifaElahi/Docker/blob/main/images/hello-word-pull.png">
-
 
 # Containers vs. Images  
 
@@ -42,7 +41,6 @@ docker pull hello-world
 - NGINX is available on Docker Hub, which is the public image registry Docker uses if no registry is specified.  
 - To run an NGINX container:  
 
-
 ```bash
 docker run nginx
 ```
@@ -58,7 +56,6 @@ Ports can be published using the -p flag:
 
 - Default Port (80): Map port 80 of the container to port 80 of your host
 
-
 ```bash
 docker run -p 80:80 nginx
 ```
@@ -73,15 +70,15 @@ docker run -p 8000:80 nginx
 # Running a Docker Container in the Background  
 
 ### Foreground vs. Background Execution  
+
 By default, Docker runs containers in the foreground.  
 
 To run a container in the background (detached mode), use the `-d` flag:  
 
-
 ```bash
 docker run -p 8000:80 -d nginx
 ```
-
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-contianer-in-background.png">
 
 - This will start the container in detached mode and return the container ID.
 - You can refer to the container using its ID or name.
@@ -90,31 +87,31 @@ docker run -p 8000:80 -d nginx
 
 To view the logs of a running container:
 
-
 ```bash
 docker logs <container-name-or-id>
 ```
 
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-logs.png">
 
 ### Stopping a Container
 
 To stop a running container:
 
-
 ```bash
 docker stop <container-name-or-id>
 ```
 
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-stop.png">
 
 ### Removing Stopped Containers
 
 To remove all stopped containers:
 
-
 ```bash
 docker container prune
 ```
 
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-container-prune.png">
 
 ### Automatic Cleanup
 
