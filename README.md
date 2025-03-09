@@ -137,14 +137,11 @@ docker run nginx
 
 To run a specific version of an image, include the tag:
 
-
 ```bash
 docker run nginx:1.27
 ```
 
-
 - Here, 1.27 is the specified tag.
-
 
 Tags are mutable:
 
@@ -152,18 +149,17 @@ Tags are mutable:
 - When 1.27.1 is released, the tag 1.27 will point to this newer version.
 - Essentially, tags like 1.27 always point to the latest image in that category.
 
-
 ### Digests for Immutable References
 
 A digest is an immutable identifier tied to a specific image version at the time of pulling.
 
 To view digests of images, use:
 
-
 ```bash
 docker image ls --digests
 ```
 
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-digests.png">
 
 #### Best Practices for Production
 
