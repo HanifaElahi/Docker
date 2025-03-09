@@ -47,6 +47,7 @@ docker pull hello-world
 docker run nginx
 ```
 
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-nginx.png">
 
 - Containers are isolated from the host's network by default.
 - To interact with the NGINX server from your host, you need to publish the port the container is listening on.
@@ -61,15 +62,13 @@ Ports can be published using the -p flag:
 ```bash
 docker run -p 80:80 nginx
 ```
-
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-container-with-port.png">
 
 - Custom Host Port: Map port 80 of the container to port 8000 of your host
-
 
 ```bash
 docker run -p 8000:80 nginx
 ```
-
 
 # Running a Docker Container in the Background  
 
