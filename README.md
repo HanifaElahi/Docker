@@ -117,22 +117,19 @@ docker container prune
 
 To automatically remove a container when it stops, use the --rm flag:
 
-
 ```bash
 docker run -p 8000:80 -d --rm nginx
 ```
 
-
 # Docker Image Tagging  
 
 ### Default Behavior  
-When running an image without specifying a tag, Docker uses the `latest` tag by default:  
 
+When running an image without specifying a tag, Docker uses the `latest` tag by default:  
 
 ```bash
 docker run nginx
 ```
-
 
 - This will pull the latest version of the image or use the latest downloaded version if it's already available.
 
@@ -241,7 +238,6 @@ To run a container in the background (detached mode) and view its logs:
 docker run -d nginx
 ```
 
-
 Then, you can check the logs of a running container using its container ID:
 
 ```bash
@@ -252,15 +248,12 @@ docker logs <container-id>
 
 To run a command or process inside an already running container, you can use docker exec:
 
-
 ```bash
 docker exec -it <container-id> /bin/bash
 ```
 
-
 - The -it flag stands for interactive, allowing you to run commands in the container's shell.
 - In this example, we’re accessing the container’s shell (/bin/bash), and you can use commands like whoami to check the current user inside the container.
-
 
 # Persistence in Docker  
 
@@ -274,6 +267,7 @@ The following command writes to a file inside the container, but the data is los
 docker run python:3.12 python -c 'f="/data.txt";open(f, "a").write(f"Ran!\n");print(open(f).read())'
 ```
 
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/persistence.png">
 
 - Every time you run this, you'll only see one copy of "Ran!\n".
 
@@ -281,24 +275,24 @@ docker run python:3.12 python -c 'f="/data.txt";open(f, "a").write(f"Ran!\n");pr
 
 To retain data between container runs, we can use mounts. Here's an example using a volume:
 
-
 ```bash
 docker run -v mydata:/data python:3.12 python -c 'f="/data/data.txt";open(f, "a").write(f"Ran!\n");print(open(f).read())'
 ```
 
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/persistence.png">
 
 # Persistence
 
 Every time we run a docker contwiner, we start fresh with the same file system everytime, previosu all runs are gone
 
-
 ```bash
 docker run python:3.12 python -c 'f="/data.txt";open(f, "a").write(f"Ran!\n");print(open(f).read())'
 ```
 
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/persistence.png">
+
 - This command uses the -v flag to mount a volume (mydata) to /data in the container.
 - Now, the data persists between container runs.
-
 
 #### Types of Mounts in Docker
 
