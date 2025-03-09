@@ -7,7 +7,7 @@
 ```bash
 docker run hello-world
 ```
-
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/hello-world-run.png">
 
 - This pulls the latest hello-world image and runs it.
 - If we run this again, it doesn't download the image again because it's already cached.
@@ -18,6 +18,8 @@ If want to pull a specific image without running it:
 ```bash
 docker pull hello-world
 ```
+
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/hello-word-pull.png">
 
 
 # Containers vs. Images  
