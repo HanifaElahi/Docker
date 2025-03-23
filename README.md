@@ -59,6 +59,7 @@ Ports can be published using the -p flag:
 ```bash
 docker run -p 80:80 nginx
 ```
+
 <img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-container-with-port.png">
 
 - Custom Host Port: Map port 80 of the container to port 8000 of your host
@@ -66,6 +67,7 @@ docker run -p 80:80 nginx
 ```bash
 docker run -p 8000:80 nginx
 ```
+<img src="https://github.com/HanifaElahi/Docker/blob/main/images/docker-contianer-in-background.png">
 
 # Running a Docker Container in the Background  
 
