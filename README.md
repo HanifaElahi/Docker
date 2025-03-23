@@ -177,6 +177,7 @@ You can pass environment variables to a container using the `-e` flag:
 docker run -e ABC=123 -e DEF=456 python:3.12 python -c "import os; print(os.environ)"
 ```
 
+<img src = "https://github.com/HanifaElahi/Docker/blob/main/images/python-env-var.png">
 
 - The -e flag sets environment variables (ABC=123, DEF=456).
 - The -c flag allows you to run an inline script.
