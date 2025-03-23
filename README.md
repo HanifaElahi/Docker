@@ -196,6 +196,8 @@ To pull the slim version of an image:
 docker pull python:3.12-slim
 ```
 
+<img src = "https://github.com/HanifaElahi/Docker/blob/main/images/docker-python-slim.png">
+
 **The slim version is nearly 10 times smaller than the non-slim version.**
 
 #### Alpine Images
